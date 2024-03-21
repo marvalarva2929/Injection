@@ -31,14 +31,8 @@ int main(int argc, char* args[]) {
     SDL_Event e;
     
     float lastRenderTime = SDL_GetTicks();
- 
-    float dems[2] = {-1, 1};
     
     Object test("trumpet.obj");
-    for (int i = 0; i < 2; i++)
-        for (int j = 0; j < 2; j++)
-            for (int k = 0; k < 2; k++)
-                test.Points.push_back(Vector3(dems[i], dems[j], dems[k]));
     inject.addObject(test);
     
     while (isRunning) {
